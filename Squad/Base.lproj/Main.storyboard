@@ -1,25 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="svu-x9-E56">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--loginViewController-->
+        <scene sceneID="SBr-nb-WIh">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="loginViewController" id="svu-x9-E56" customClass="LoginViewController" customModule="Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="226-R5-5GG"/>
+                        <viewControllerLayoutGuide type="bottom" id="VTi-0f-C02"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="VlN-4s-tw3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTm-bP-xOQ">
+                                <rect key="frame" x="20" y="261" width="560" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.98132429990000003" green="1" blue="0.99734649040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="simpleAction:" destination="svu-x9-E56" eventType="touchUpInside" id="alP-9W-yQX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6U-PN-Cj0">
+                                <rect key="frame" x="20" y="308" width="560" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.98132429990000003" green="1" blue="0.99734649040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout" destination="svu-x9-E56" eventType="touchUpInside" id="Cm8-j3-6zF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S6U-PN-Cj0" firstAttribute="trailing" secondItem="QTm-bP-xOQ" secondAttribute="trailing" id="89T-Ro-V8V"/>
+                            <constraint firstItem="S6U-PN-Cj0" firstAttribute="top" secondItem="QTm-bP-xOQ" secondAttribute="bottom" constant="17" id="8GR-27-sxH"/>
+                            <constraint firstItem="S6U-PN-Cj0" firstAttribute="leading" secondItem="VlN-4s-tw3" secondAttribute="leadingMargin" id="VKZ-98-Wn5"/>
+                            <constraint firstItem="QTm-bP-xOQ" firstAttribute="top" secondItem="226-R5-5GG" secondAttribute="bottom" constant="241" id="eMN-5i-kx3"/>
+                            <constraint firstItem="QTm-bP-xOQ" firstAttribute="leading" secondItem="S6U-PN-Cj0" secondAttribute="leading" id="p6g-hG-PPp"/>
+                            <constraint firstItem="QTm-bP-xOQ" firstAttribute="trailing" secondItem="VlN-4s-tw3" secondAttribute="trailingMargin" id="x03-Ga-n6D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="UWY-Pw-HcQ" kind="show" identifier="userLoggedIn" id="iUV-Pn-TkB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jD6-a5-d9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="496"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gP3-lj-zeH">
+            <objects>
+                <viewController id="UWY-Pw-HcQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wyV-Le-Ta6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y4q-Z3-6f2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9qN-LS-aMx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHv-LW-Lv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2160" y="496"/>
         </scene>
     </scenes>
 </document>
