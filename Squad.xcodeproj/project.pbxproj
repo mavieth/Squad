@@ -26,6 +26,7 @@
 		A3C9BF471C112498008C7E18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C9BF451C112498008C7E18 /* LaunchScreen.storyboard */; };
 		A3C9BF521C112498008C7E18 /* SquadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9BF511C112498008C7E18 /* SquadTests.swift */; };
 		A3C9BF5D1C112499008C7E18 /* SquadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9BF5C1C112499008C7E18 /* SquadUITests.swift */; };
+		A3FF72E91C1144ED00706300 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FF72E81C1144ED00706300 /* HomeViewController.swift */; };
 		D355DF603B6DC0391029A27C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0B40DED130E2E4AA716E96 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		A3C9BF581C112499008C7E18 /* SquadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C9BF5C1C112499008C7E18 /* SquadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadUITests.swift; sourceTree = "<group>"; };
 		A3C9BF5E1C112499008C7E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3FF72E81C1144ED00706300 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2F7B51406E20984420308CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FD0B40DED130E2E4AA716E96 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 		A352354E1C1141AC000B4052 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A3FF72E81C1144ED00706300 /* HomeViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				A37B2F5B1C112B4B00DA9333 /* LoginViewController.swift in Sources */,
 				A3C9BF3F1C112498008C7E18 /* ViewController.swift in Sources */,
 				A3C9BF3D1C112498008C7E18 /* AppDelegate.swift in Sources */,
+				A3FF72E91C1144ED00706300 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
         <!--loginViewController-->
         <scene sceneID="SBr-nb-WIh">
             <objects>
-                <viewController title="loginViewController" id="svu-x9-E56" customClass="LoginViewController" customModule="Squad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="loginViewController" id="svu-x9-E56" customClass="LoginViewController" customModule="Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="226-R5-5GG"/>
                         <viewControllerLayoutGuide type="bottom" id="VTi-0f-C02"/>
@@ -53,17 +53,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="UWY-Pw-HcQ" kind="show" identifier="userLoggedIn" id="iUV-Pn-TkB"/>
+                        <segue destination="7YM-Lb-VT6" kind="show" identifier="loginSegue" id="iUV-Pn-TkB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jD6-a5-d9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1425" y="496"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="gP3-lj-zeH">
             <objects>
-                <viewController id="UWY-Pw-HcQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="UWY-Pw-HcQ" customClass="HomeViewController" customModule="Squad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wyV-Le-Ta6"/>
                         <viewControllerLayoutGuide type="bottom" id="Y4q-Z3-6f2"/>
@@ -74,8 +74,34 @@
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uDH-F0-CWA">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="kBk-QR-W4m">
+                            <connections>
+                                <action selector="logoutLoggedInUser" destination="UWY-Pw-HcQ" id="aJO-We-8YV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHv-LW-Lv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2972" y="496"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q1m-BM-LB5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7YM-Lb-VT6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gZ9-Tj-lP7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UWY-Pw-HcQ" kind="relationship" relationship="rootViewController" id="fVZ-HM-RdF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UUd-rR-CB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2160" y="496"/>
         </scene>

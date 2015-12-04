@@ -18,8 +18,15 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSi
     var signUpViewController : PFSignUpViewController! = PFSignUpViewController()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
         if (PFUser.currentUser() == nil) {
             self.loginViewController.fields = [PFLogInFields.UsernameAndPassword, PFLogInFields.LogInButton , PFLogInFields.SignUpButton , PFLogInFields.PasswordForgotten , PFLogInFields.DismissButton]
             
@@ -38,12 +45,11 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSi
             self.signUpViewController.delegate = self
             
             self.loginViewController.signUpController = self.signUpViewController
+        } else{
+            self.performSegueWithIdentifier("loginSegue", sender: self)
+            print(PFUser.currentUser())
         }
-
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,32 +72,29 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSi
             return true
         } else{
             return false
-        }   
+        }
+        
+        
     }
     
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
         print("Failed to login")
     }
     
-    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {        
         print("Did login user.")
-        // need to make segue
-        print("Dismissing loginViewController")
         self.dismissViewControllerAnimated(true, completion: nil)
-        
-        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("Home") as UIViewController
-        self.presentViewController(viewController, animated: true, completion: nil)
+        print("User \(user.username) did log in.")
         
     }
     
+
     
     // MARK: Parse Logout
     @IBAction func logout() {
         PFUser.logOut()
         print("User logout")
     }
-    
-    
     
     
     // MARK: Parse Sign Up
@@ -103,8 +106,7 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSi
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
         print("Sign Up User.")
         self.dismissViewControllerAnimated(true, completion: nil)
-        print("User \(user.username) did log in.")
-        
+        print("User \(user.username) did sign up in.")   
     }
     
     func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
@@ -115,7 +117,7 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSi
     
     
     
-
+    
     // MARK: Actions
     
     @IBAction func simpleAction(sender: AnyObject){
