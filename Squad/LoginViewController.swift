@@ -54,7 +54,10 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSi
     
     
     
-    // MARK: Parse Login / Logout
+    
+    
+    
+    // MARK: Parse Login
     
     func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username: String, password: String) -> Bool {
         
@@ -81,10 +84,14 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSi
         
     }
     
+    
+    // MARK: Parse Logout
     @IBAction func logout() {
         PFUser.logOut()
         print("User logout")
     }
+    
+    
     
     
     // MARK: Parse Sign Up
@@ -103,6 +110,10 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSi
     func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
         print("User dismissed sign up.")
     }
+    
+    
+    
+    
     
 
     // MARK: Actions
