@@ -38,6 +38,11 @@ class HomeViewController: UIViewController {
     }
     
     
+    @IBAction func Dash() {
+        self.performSegueWithIdentifier("showDash", sender: self)
+
+    }
+    
     
     
 }

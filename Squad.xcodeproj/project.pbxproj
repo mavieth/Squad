@@ -26,6 +26,10 @@
 		A3C9BF471C112498008C7E18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C9BF451C112498008C7E18 /* LaunchScreen.storyboard */; };
 		A3C9BF521C112498008C7E18 /* SquadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9BF511C112498008C7E18 /* SquadTests.swift */; };
 		A3C9BF5D1C112499008C7E18 /* SquadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9BF5C1C112499008C7E18 /* SquadUITests.swift */; };
+		A3D0838C1C11502B00FE6F6C /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0838B1C11502B00FE6F6C /* TimelineViewController.swift */; };
+		A3D0838E1C11504700FE6F6C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0838D1C11504700FE6F6C /* DetailViewController.swift */; };
+		A3D083901C11505900FE6F6C /* TimelineViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0838F1C11505900FE6F6C /* TimelineViewCell.swift */; };
+		A3D083941C1150F600FE6F6C /* TimelineViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D083931C1150F600FE6F6C /* TimelineViewCell.xib */; };
 		A3FF72E91C1144ED00706300 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FF72E81C1144ED00706300 /* HomeViewController.swift */; };
 		D355DF603B6DC0391029A27C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0B40DED130E2E4AA716E96 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +80,10 @@
 		A3C9BF581C112499008C7E18 /* SquadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C9BF5C1C112499008C7E18 /* SquadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadUITests.swift; sourceTree = "<group>"; };
 		A3C9BF5E1C112499008C7E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3D0838B1C11502B00FE6F6C /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		A3D0838D1C11504700FE6F6C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A3D0838F1C11505900FE6F6C /* TimelineViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewCell.swift; sourceTree = "<group>"; };
+		A3D083931C1150F600FE6F6C /* TimelineViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineViewCell.xib; sourceTree = "<group>"; };
 		A3FF72E81C1144ED00706300 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2F7B51406E20984420308CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FD0B40DED130E2E4AA716E96 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +197,7 @@
 		A3C9BF3B1C112498008C7E18 /* Squad */ = {
 			isa = PBXGroup;
 			children = (
+				A3D0838A1C11501200FE6F6C /* SquadTimeline */,
 				A352354E1C1141AC000B4052 /* Home */,
 				A37B2F5C1C112B5400DA9333 /* Login */,
 				A3C9BF3C1C112498008C7E18 /* AppDelegate.swift */,
@@ -217,6 +226,17 @@
 				A3C9BF5E1C112499008C7E18 /* Info.plist */,
 			);
 			path = SquadUITests;
+			sourceTree = "<group>";
+		};
+		A3D0838A1C11501200FE6F6C /* SquadTimeline */ = {
+			isa = PBXGroup;
+			children = (
+				A3D0838B1C11502B00FE6F6C /* TimelineViewController.swift */,
+				A3D0838D1C11504700FE6F6C /* DetailViewController.swift */,
+				A3D0838F1C11505900FE6F6C /* TimelineViewCell.swift */,
+				A3D083931C1150F600FE6F6C /* TimelineViewCell.xib */,
+			);
+			name = SquadTimeline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +350,7 @@
 				A3C9BF471C112498008C7E18 /* LaunchScreen.storyboard in Resources */,
 				A3C9BF441C112498008C7E18 /* Assets.xcassets in Resources */,
 				A3C9BF421C112498008C7E18 /* Main.storyboard in Resources */,
+				A3D083941C1150F600FE6F6C /* TimelineViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +426,10 @@
 				A37B2F5B1C112B4B00DA9333 /* LoginViewController.swift in Sources */,
 				A3C9BF3F1C112498008C7E18 /* ViewController.swift in Sources */,
 				A3C9BF3D1C112498008C7E18 /* AppDelegate.swift in Sources */,
+				A3D0838E1C11504700FE6F6C /* DetailViewController.swift in Sources */,
 				A3FF72E91C1144ED00706300 /* HomeViewController.swift in Sources */,
+				A3D0838C1C11502B00FE6F6C /* TimelineViewController.swift in Sources */,
+				A3D083901C11505900FE6F6C /* TimelineViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ import UIKit
 import Parse
 import ParseUI
 import Bolts
+import SAHistoryNavigationViewController
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.0, green: 0.549, blue: 0.89, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = .whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+        
+        (window?.rootViewController as? UINavigationController)?.historyDelegate = self
+        
         
         return true
     }
@@ -56,3 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: SAHistoryNavigationViewControllerDelegate {
+    func historyControllerDidShowHistory(controller: SAHistoryNavigationViewController, viewController: UIViewController) {
+        print("did show history")
+    }
+}

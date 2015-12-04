@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iJo-GX-zg9" customClass="TimelineViewCell" customModule="Squad" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iJo-GX-zg9" id="Wl0-94-q7U">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XIW-u3-8m8">
+                        <rect key="frame" x="10" y="10" width="80" height="80"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XIW-u3-8m8" secondAttribute="height" multiplier="1:1" id="fYa-Bb-QfQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUz-sI-lGO">
+                        <rect key="frame" x="100" y="15" width="210" height="16"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="oYB-hF-aqO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gc-6C-Avc">
+                        <rect key="frame" x="100" y="41" width="210" height="49"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="RUz-sI-lGO" firstAttribute="leading" secondItem="XIW-u3-8m8" secondAttribute="trailing" constant="10" id="598-7o-fpG"/>
+                    <constraint firstItem="XIW-u3-8m8" firstAttribute="leading" secondItem="Wl0-94-q7U" secondAttribute="leading" constant="10" id="5M9-NS-rrt"/>
+                    <constraint firstAttribute="bottom" secondItem="XIW-u3-8m8" secondAttribute="bottom" constant="9.5" id="VfM-Eu-kdO"/>
+                    <constraint firstAttribute="bottom" secondItem="9Gc-6C-Avc" secondAttribute="bottom" constant="9.5" id="aQM-Mv-sM4"/>
+                    <constraint firstAttribute="trailing" secondItem="RUz-sI-lGO" secondAttribute="trailing" constant="10" id="gRf-0E-y5y"/>
+                    <constraint firstItem="9Gc-6C-Avc" firstAttribute="leading" secondItem="XIW-u3-8m8" secondAttribute="trailing" constant="10" id="gRo-aa-Io4"/>
+                    <constraint firstAttribute="trailing" secondItem="9Gc-6C-Avc" secondAttribute="trailing" constant="10" id="hYd-Qj-yhM"/>
+                    <constraint firstItem="XIW-u3-8m8" firstAttribute="top" secondItem="Wl0-94-q7U" secondAttribute="top" constant="10" id="hvC-ll-46Y"/>
+                    <constraint firstItem="9Gc-6C-Avc" firstAttribute="top" secondItem="RUz-sI-lGO" secondAttribute="bottom" constant="10" id="nGQ-HX-9dp"/>
+                    <constraint firstItem="RUz-sI-lGO" firstAttribute="top" secondItem="Wl0-94-q7U" secondAttribute="top" constant="15" id="tH0-uK-p5I"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="iconImageView" destination="XIW-u3-8m8" id="ude-ls-eqr"/>
+                <outlet property="mainTextLabel" destination="9Gc-6C-Avc" id="gKO-BE-0dx"/>
+                <outlet property="usernameLabel" destination="RUz-sI-lGO" id="2lR-1P-qGD"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
