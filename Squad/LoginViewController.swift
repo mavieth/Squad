@@ -63,8 +63,7 @@ class LoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSi
             return true
         } else{
             return false
-        }
-        
+        }   
     }
     
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
