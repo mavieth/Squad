@@ -19,6 +19,7 @@
 		A37B2F571C112A0B00DA9333 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37B2F561C112A0B00DA9333 /* StoreKit.framework */; };
 		A37B2F591C112A1200DA9333 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37B2F581C112A1200DA9333 /* SystemConfiguration.framework */; };
 		A37B2F5B1C112B4B00DA9333 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B2F5A1C112B4B00DA9333 /* LoginViewController.swift */; };
+		A38BED041C12836D000D2D8A /* SquadListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38BED031C12836D000D2D8A /* SquadListTableViewController.swift */; };
 		A3C9BF3D1C112498008C7E18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9BF3C1C112498008C7E18 /* AppDelegate.swift */; };
 		A3C9BF3F1C112498008C7E18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9BF3E1C112498008C7E18 /* ViewController.swift */; };
 		A3C9BF421C112498008C7E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C9BF401C112498008C7E18 /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		A37B2F561C112A0B00DA9333 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A37B2F581C112A1200DA9333 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A37B2F5A1C112B4B00DA9333 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A38BED031C12836D000D2D8A /* SquadListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquadListTableViewController.swift; sourceTree = "<group>"; };
 		A3C9BF391C112498008C7E18 /* Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C9BF3C1C112498008C7E18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C9BF3E1C112498008C7E18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,14 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		A38BED021C12829C000D2D8A /* PFTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A38BED031C12836D000D2D8A /* SquadListTableViewController.swift */,
+			);
+			name = PFTableView;
+			sourceTree = "<group>";
+		};
 		A3C9BF301C112498008C7E18 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 		A3C9BF3B1C112498008C7E18 /* Squad */ = {
 			isa = PBXGroup;
 			children = (
+				A38BED021C12829C000D2D8A /* PFTableView */,
 				A3D0838A1C11501200FE6F6C /* SquadTimeline */,
 				A352354E1C1141AC000B4052 /* Home */,
 				A37B2F5C1C112B5400DA9333 /* Login */,
@@ -429,6 +440,7 @@
 				A3D0838E1C11504700FE6F6C /* DetailViewController.swift in Sources */,
 				A3FF72E91C1144ED00706300 /* HomeViewController.swift in Sources */,
 				A3D0838C1C11502B00FE6F6C /* TimelineViewController.swift in Sources */,
+				A38BED041C12836D000D2D8A /* SquadListTableViewController.swift in Sources */,
 				A3D083901C11505900FE6F6C /* TimelineViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
